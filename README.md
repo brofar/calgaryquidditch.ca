@@ -1,2 +1,3 @@
-# cqc-website
-Website for calgaryquidditch.ca
+# Calgary Quidditch
+
+Website for Calgary Quidditch, a Calgary-based quadball club.
