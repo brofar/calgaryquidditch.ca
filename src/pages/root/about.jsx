@@ -1,7 +1,5 @@
 import {
     createStyles,
-    Badge,
-    Group,
     Title,
     Text,
     Card,
@@ -27,14 +25,6 @@ const mockdata = [
 ];
 
 const useStyles = createStyles((theme) => ({
-    title: {
-        fontSize: rem(34),
-        fontWeight: 900,
-
-        [theme.fn.smallerThan('sm')]: {
-            fontSize: rem(24),
-        },
-    },
 
     description: {
         maxWidth: 600,
@@ -52,10 +42,6 @@ const useStyles = createStyles((theme) => ({
         },
     },
 
-    card: {
-        border: `${rem(1)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
-            }`,
-    },
 
     cardTitle: {
         '&::after': {
@@ -72,7 +58,7 @@ const useStyles = createStyles((theme) => ({
 export default function About() {
     const { classes, theme } = useStyles();
     const features = mockdata.map((feature) => (
-        <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
+        <Card key={feature.title} shadow="md" radius="md" padding="xl">
             <feature.icon size={rem(50)} stroke={2} color={theme.fn.primaryColor()} />
             <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
                 {feature.title}
